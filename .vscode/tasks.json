@@ -1,0 +1,28 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build debug",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-I/usr/include/glib-2.0",
+                "-I/usr/lib/x86_64-linux-gnu/glib-2.0/include",
+                "-I/usr/include",
+                "-Wdeprecated-declarations",
+                "ex1.cpp",
+                "-lgnome-keyring",
+                "-lglib-2.0",
+                "-o",
+                "ex1"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
